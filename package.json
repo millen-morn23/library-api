@@ -1,0 +1,28 @@
+{
+  "name": "contacts-project",
+  "version": "1.0.0",
+  "description": "CSE 341 Contacts API Project",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "mongodb",
+    "contacts",
+    "api",
+    "cse341"
+  ],
+  "author": "Millen Morn",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mongodb": "^7.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
