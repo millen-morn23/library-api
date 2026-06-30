@@ -5,6 +5,10 @@
 ### Home Route
 GET http://localhost:8080/
 
+#################################################
+# BOOKS
+#################################################
+
 ###
 
 ### Get All Books
@@ -76,3 +80,70 @@ Content-Type: application/json
 
 ### Delete Book
 DELETE http://localhost:8080/books/6a43ad93d8dd3f836a7b10c7
+
+#################################################
+# AUTHORS
+#################################################
+
+###
+
+### Get All Authors
+GET http://localhost:8080/authors
+
+###
+
+### Get Single Author
+GET http://localhost:8080/authors/6a43b68f62f26eccf4ec5abc
+
+###
+
+### Create Author - Robert C. Martin
+POST http://localhost:8080/authors
+Content-Type: application/json
+
+{
+    "firstName": "Robert",
+    "lastName": "Martin",
+    "nationality": "American",
+    "birthYear": 1952,
+    "email": "unclebob@example.com",
+    "genre": "Software Engineering",
+    "biography": "Author of Clean Code and Agile Software Development."
+}
+
+###
+
+### Create Author - Andrew Hunt
+POST http://localhost:8080/authors
+Content-Type: application/json
+
+{
+    "firstName": "Andrew",
+    "lastName": "Hunt",
+    "nationality": "American",
+    "birthYear": 1964,
+    "email": "andrew.hunt@example.com",
+    "genre": "Software Development",
+    "biography": "Co-author of The Pragmatic Programmer."
+}
+
+###
+
+### Update Author
+PUT http://localhost:8080/authors/6a43b68f62f26eccf4ec5abc
+Content-Type: application/json
+
+{
+    "firstName": "Robert Cecil",
+    "lastName": "Martin",
+    "nationality": "American",
+    "birthYear": 1952,
+    "email": "unclebob.updated@example.com",
+    "genre": "Software Engineering",
+    "biography": "Updated biography for Uncle Bob."
+}
+
+###
+
+### Delete Author
+DELETE http://localhost:8080/authors/6a43b68f62f26eccf4ec5abc
