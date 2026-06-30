@@ -1,7 +1,7 @@
 {
-  "name": "contacts-project",
+  "name": "library-api",
   "version": "1.0.0",
-  "description": "CSE 341 Contacts API Project",
+  "description": "CSE 341 Library Management API Project",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -12,7 +12,9 @@
     "node",
     "express",
     "mongodb",
-    "contacts",
+    "library",
+    "books",
+    "authors",
     "api",
     "cse341"
   ],

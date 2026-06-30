@@ -1,0 +1,78 @@
+### ============================================
+### Library Management API
+### ============================================
+
+### Home Route
+GET http://localhost:8080/
+
+###
+
+### Get All Books
+GET http://localhost:8080/books
+
+###
+
+### Get Single Book
+GET http://localhost:8080/books/6a43ad93d8dd3f836a7b10c7
+
+###
+
+### Create Book - Clean Code
+POST http://localhost:8080/books
+Content-Type: application/json
+
+{
+    "title": "Clean Code",
+    "author": "Robert C. Martin",
+    "genre": "Programming",
+    "isbn": "9780132350884",
+    "publisher": "Prentice Hall",
+    "pages": 464,
+    "language": "English",
+    "publishedYear": 2008,
+    "available": true,
+    "description": "A handbook of agile software craftsmanship."
+}
+
+###
+
+### Create Book - The Pragmatic Programmer
+POST http://localhost:8080/books
+Content-Type: application/json
+
+{
+    "title": "The Pragmatic Programmer",
+    "author": "Andrew Hunt",
+    "genre": "Programming",
+    "isbn": "9780201616224",
+    "publisher": "Addison-Wesley",
+    "pages": 352,
+    "language": "English",
+    "publishedYear": 1999,
+    "available": true,
+    "description": "Journey to mastery for modern software developers."
+}
+
+###
+
+### Update Book
+PUT http://localhost:8080/books/6a43ad93d8dd3f836a7b10c7
+Content-Type: application/json
+
+{
+    "title": "Clean Code (2nd Edition)",
+    "author": "Robert C. Martin",
+    "genre": "Programming",
+    "isbn": "9780132350884",
+    "publisher": "Prentice Hall",
+    "pages": 500,
+    "language": "English",
+    "publishedYear": 2025,
+    "available": true,
+    "description": "Updated edition of the software craftsmanship handbook."
+}
+
+###
+
+### Delete Book
+DELETE http://localhost:8080/books/6a43ad93d8dd3f836a7b10c7
