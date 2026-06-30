@@ -160,16 +160,16 @@ POST http://localhost:8080/books
 Content-Type: application/json
 
 {
-    "title": "Atomic Habits",
-    "author": "James Clear",
-    "genre": "Self Help",
-    "isbn": "9780735211292",
-    "publisher": "Penguin",
-    "pages": 320,
+    "title": "Refactoring",
+    "author": "Martin Fowler",
+    "genre": "Programming",
+    "isbn": "9780134757599",
+    "publisher": "Addison-Wesley",
+    "pages": 448,
     "language": "English",
     "publishedYear": 2018,
     "available": true,
-    "description": "A practical guide to building good habits."
+    "description": "Improving the design of existing code through systematic refactoring."
 }
 
 ###
@@ -200,13 +200,13 @@ POST http://localhost:8080/authors
 Content-Type: application/json
 
 {
-    "firstName": "James",
-    "lastName": "Clear",
-    "nationality": "American",
-    "birthYear": 1986,
-    "email": "james.clear@example.com",
-    "genre": "Self Help",
-    "biography": "Author of Atomic Habits."
+    "firstName": "Erich",
+    "lastName": "Gamma",
+    "nationality": "Swiss",
+    "birthYear": 1961,
+    "email": "erich.gamma@example.com",
+    "genre": "Object-Oriented Programming",
+    "biography": "Co-author of Design Patterns and one of the Gang of Four authors."
 }
 
 ###
