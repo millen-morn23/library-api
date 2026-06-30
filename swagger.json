@@ -1,17 +1,209 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "Contacts API",
-    "description": "CSE 341 Contacts API Documentation",
+    "title": "Library Management API",
+    "description": "CSE 341 Library Management API Documentation",
     "version": "1.0.0"
   },
-  "host": "contacts-project-rbzf.onrender.com",
+  "host": "localhost:8080",
   "basePath": "/",
   "schemes": [
-    "https"
+    "http"
   ],
   "paths": {
-    "/contacts/": {
+    "/": {
+      "get": {
+        "summary": "API Home",
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "Library Management API is running successfully."
+          }
+        }
+      }
+    },
+    "/books/": {
+      "get": {
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "example": "any"
+                },
+                "author": {
+                  "example": "any"
+                },
+                "genre": {
+                  "example": "any"
+                },
+                "isbn": {
+                  "example": "any"
+                },
+                "publisher": {
+                  "example": "any"
+                },
+                "pages": {
+                  "example": "any"
+                },
+                "language": {
+                  "example": "any"
+                },
+                "publishedYear": {
+                  "example": "any"
+                },
+                "available": {
+                  "example": "any"
+                },
+                "description": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/books/{id}": {
+      "get": {
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "put": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "example": "any"
+                },
+                "author": {
+                  "example": "any"
+                },
+                "genre": {
+                  "example": "any"
+                },
+                "isbn": {
+                  "example": "any"
+                },
+                "publisher": {
+                  "example": "any"
+                },
+                "pages": {
+                  "example": "any"
+                },
+                "language": {
+                  "example": "any"
+                },
+                "publishedYear": {
+                  "example": "any"
+                },
+                "available": {
+                  "example": "any"
+                },
+                "description": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/authors/": {
       "get": {
         "description": "",
         "produces": [
@@ -41,13 +233,19 @@
                 "lastName": {
                   "example": "any"
                 },
+                "nationality": {
+                  "example": "any"
+                },
+                "birthYear": {
+                  "example": "any"
+                },
                 "email": {
                   "example": "any"
                 },
-                "favoriteColor": {
+                "genre": {
                   "example": "any"
                 },
-                "birthday": {
+                "biography": {
                   "example": "any"
                 }
               }
@@ -67,7 +265,7 @@
         }
       }
     },
-    "/contacts/{id}": {
+    "/authors/{id}": {
       "get": {
         "description": "",
         "produces": [
@@ -85,11 +283,11 @@
           "200": {
             "description": "OK"
           },
+          "400": {
+            "description": "Bad Request"
+          },
           "404": {
             "description": "Not Found"
-          },
-          "500": {
-            "description": "Internal Server Error"
           }
         }
       },
@@ -114,13 +312,19 @@
                 "lastName": {
                   "example": "any"
                 },
+                "nationality": {
+                  "example": "any"
+                },
+                "birthYear": {
+                  "example": "any"
+                },
                 "email": {
                   "example": "any"
                 },
-                "favoriteColor": {
+                "genre": {
                   "example": "any"
                 },
-                "birthday": {
+                "biography": {
                   "example": "any"
                 }
               }
@@ -136,9 +340,6 @@
           },
           "404": {
             "description": "Not Found"
-          },
-          "500": {
-            "description": "Internal Server Error"
           }
         }
       },
@@ -156,11 +357,11 @@
           "204": {
             "description": "No Content"
           },
+          "400": {
+            "description": "Bad Request"
+          },
           "404": {
             "description": "Not Found"
-          },
-          "500": {
-            "description": "Internal Server Error"
           }
         }
       }

@@ -1,15 +1,15 @@
-const swaggerAutogen = require('swagger-autogen')();
+const swaggerAutogen = require("swagger-autogen")();
 
 const doc = {
     info: {
-        title: 'Contacts API',
-        description: 'CSE 341 Contacts API Documentation'
+        title: "Library Management API",
+        description: "CSE 341 Library Management API Documentation"
     },
-    host: 'contacts-project-rbzf.onrender.com',
-    schemes: ['https']
+    host: "localhost:8080",
+    schemes: ["http"]
 };
 
-const outputFile = './swagger.json';
-const endpointsFiles = ['./server.js'];
+const outputFile = "./swagger.json";
+const endpointsFiles = ["./server.js"];
 
 swaggerAutogen(outputFile, endpointsFiles, doc);

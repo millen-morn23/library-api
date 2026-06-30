@@ -147,3 +147,80 @@ Content-Type: application/json
 
 ### Delete Author
 DELETE http://localhost:8080/authors/6a43b68f62f26eccf4ec5abc
+
+
+#################################################
+# BOOK VALIDATION TESTS
+#################################################
+
+###
+
+### Create Book (Validation Success)
+POST http://localhost:8080/books
+Content-Type: application/json
+
+{
+    "title": "Atomic Habits",
+    "author": "James Clear",
+    "genre": "Self Help",
+    "isbn": "9780735211292",
+    "publisher": "Penguin",
+    "pages": 320,
+    "language": "English",
+    "publishedYear": 2018,
+    "available": true,
+    "description": "A practical guide to building good habits."
+}
+
+###
+
+### Create Book (Validation Failure)
+POST http://localhost:8080/books
+Content-Type: application/json
+
+{
+    "title": "",
+    "author": "",
+    "genre": "",
+    "isbn": "",
+    "publisher": "",
+    "pages": -5,
+    "language": "",
+    "publishedYear": 3000,
+    "available": "yes",
+    "description": ""
+}
+
+
+# AUTHOR VALIDATION TESTS
+###
+
+### Create Author (Validation Success)
+POST http://localhost:8080/authors
+Content-Type: application/json
+
+{
+    "firstName": "James",
+    "lastName": "Clear",
+    "nationality": "American",
+    "birthYear": 1986,
+    "email": "james.clear@example.com",
+    "genre": "Self Help",
+    "biography": "Author of Atomic Habits."
+}
+
+###
+
+### Create Author (Validation Failure)
+POST http://localhost:8080/authors
+Content-Type: application/json
+
+{
+    "firstName": "",
+    "lastName": "",
+    "nationality": "",
+    "birthYear": 3000,
+    "email": "not-an-email",
+    "genre": "",
+    "biography": ""
+}
