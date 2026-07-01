@@ -5,10 +5,10 @@
     "description": "CSE 341 Library Management API Documentation",
     "version": "1.0.0"
   },
-  "host": "localhost:8080",
+  "host": "library-api-bgpy.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
     "/": {
