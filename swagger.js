@@ -5,8 +5,8 @@ const doc = {
         title: "Library Management API",
         description: "CSE 341 Library Management API Documentation"
     },
-    host: "library-api-bgpy.onrender.com",
-    schemes: ["https"]
+    host: "localhost:8080",
+    schemes: ["http"]
 };
 
 const outputFile = "./swagger.json";

@@ -16,6 +16,9 @@ router.get("/", (req, res) => {
     res.send("Welcome to the Library Management API");
 });
 
+// Authentication Routes
+router.use("/auth", require("./auth"));
+
 // Books Routes
 router.use("/books", require("./books"));
 
